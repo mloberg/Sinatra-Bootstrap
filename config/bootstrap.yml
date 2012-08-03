@@ -1,0 +1,2 @@
+redis: redis://127.0.0.1
+auth_token: f98bd8aaa76116cefca31acc1d91b468
