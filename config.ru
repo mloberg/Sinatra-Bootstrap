@@ -18,4 +18,4 @@ map("/resque") { run Resque::Server.new }
 map("/css")    { run stylesheets }
 map("/js")     { run javascripts }
 
-map("/")       { run App::App }
+map("/")       { run Bootstrap::App }
