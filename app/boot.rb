@@ -16,7 +16,13 @@ require 'json'
 
 require 'bootstrap'
 
-DataMapper.setup(:default, 'mysql://user:password@hostname/database')
+DataMapper.setup(:default, {
+  :adapter  => Bootstrap.config.db_adapter,
+  :host     => Bootstrap.config.db_host,
+  :username => Bootstrap.config.db_user,
+  :password => Bootstrap.config.db_pass,
+  :database => Bootstrap.config.db
+})
 
 require 'models/user'
 
